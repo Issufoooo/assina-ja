@@ -1,0 +1,26 @@
+ASSINAJÁ — VERSÃO COM BRANDINTRO INTEGRADO
+
+O que foi feito:
+1. Adicionado components/processing/BrandIntro.tsx
+2. Estilos do BrandIntro adicionados ao app/globals.css
+3. Landing page mostra a intro apenas uma vez por sessão do navegador
+4. Login mostra BrandIntro depois de validar a sessão e antes de abrir o dashboard
+5. Registo mostra BrandIntro com mensagem própria antes de abrir dashboard ou confirmação por email
+6. app/auth/register agora redireciona para /register para evitar rota duplicada antiga
+7. Removido next.config.ts duplicado; fica apenas next.config.js
+8. Removido ficheiro solto do billing: New Text Document.txt
+
+ANTES DE USAR:
+- Copia o teu .env.local para a raiz deste projeto.
+- Confirma que public/brand/assinaja-logo.png existe.
+
+COMANDOS:
+npm install
+npm run build
+npm run dev
+
+TESTAR:
+http://localhost:3000/
+http://localhost:3000/login
+http://localhost:3000/register
+http://localhost:3000/dashboard

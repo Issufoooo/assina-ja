@@ -1,0 +1,16 @@
+REVISAO DO PACOTE ANIMADO
+
+Este ZIP contém o projecto completo, com todos os ficheiros do ZIP original.
+
+Validação feita:
+- Ficheiros do projecto original: 86
+- Ficheiros do projecto devolvido: 87
+- Ficheiros originais em falta: 0
+- Ficheiro novo adicionado: components/ui/reveal.tsx
+
+Alterações principais:
+- app/page.tsx: animações leves na landing page, entradas suaves, hover states e motion subtil.
+- components/ui/reveal.tsx: componentes reutilizáveis Reveal e Float.
+- package.json/package-lock.json: mantêm framer-motion como dependência para as animações.
+
+Nada do ZIP original foi removido.

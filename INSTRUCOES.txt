@@ -1,0 +1,46 @@
+PATCH VISUAL ASSINAJÁ — INSTRUÇÕES
+
+1) Fecha o servidor dev, se estiver a correr:
+   Ctrl + C
+
+2) Faz backup rápido do projeto atual.
+
+3) Copia as pastas/ficheiros deste ZIP por cima da raiz do teu projeto.
+   Mantém a mesma estrutura:
+   - app/...
+   - components/...
+   - public/...
+   - next.config.js
+
+4) Copia também o ficheiro APPLY_VISUAL_PATCH.ps1 para a raiz do projeto.
+
+5) No PowerShell, dentro da raiz do projeto, executa:
+   .\APPLY_VISUAL_PATCH.ps1
+
+6) Testa a build:
+   npm run build
+
+7) Depois testa local:
+   npm run dev
+
+8) URLs para testar:
+   http://localhost:3000/
+   http://localhost:3000/login
+   http://localhost:3000/register
+   http://localhost:3000/dashboard
+
+O QUE ESTE PATCH ALTERA
+- Landing page com visual premium, logo correto e cards glass.
+- Background menos branco, com atmosfera azul/violeta subtil.
+- TopBar com logo correto e melhor proporção.
+- Dashboard com cards mais glass/3D.
+- Login e Registo com identidade visual real.
+- Inputs com surface mais premium.
+- Bottom nav mais glass e com aba Plano.
+- Novo logo recortado/transparente: public/brand/assinaja-mark.png
+
+IMPORTANTE
+- Este ZIP não mexe na base de dados.
+- Este ZIP não mexe nas API routes.
+- Este ZIP não substitui o teu .env.local.
+- Se existir next.config.ts, o script apaga, porque o Next 14 está a rejeitar esse ficheiro.
