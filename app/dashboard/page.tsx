@@ -35,7 +35,7 @@ async function getContracts(userId: string): Promise<ContractSummary[]> {
 
 function EmptyState() {
   return (
-    <div className="glass rounded-[36px] px-7 py-16 text-center">
+    <div className="glass rounded-[32px] px-6 py-12 text-center sm:rounded-[36px] sm:px-7 sm:py-16">
       <div className="glass-soft mx-auto grid h-16 w-16 place-items-center rounded-full">
         <FileText size={28} className="text-primary" />
       </div>
@@ -64,11 +64,11 @@ export default async function DashboardPage() {
   const contracts = await getContracts(user.id)
 
   return (
-    <div className="mx-auto w-full max-w-[540px] px-5 pb-6 pt-3">
-      <div className="mb-7 flex items-end justify-between gap-5">
+    <div className="mx-auto w-full max-w-[540px] px-5 pb-[112px] pt-3">
+      <div className="mb-6 flex items-end justify-between gap-4 sm:mb-7 sm:gap-5">
         <div>
-          <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary/75">Painel</p>
-          <h1 className="mt-2 font-display text-[34px] font-extrabold tracking-[-0.045em] text-ink-primary">Contratos</h1>
+          <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-primary/75 sm:text-sm">Painel</p>
+          <h1 className="mt-2 font-display text-[32px] font-extrabold tracking-[-0.045em] text-ink-primary sm:text-[34px]">Contratos</h1>
           <p className="mt-1 text-sm font-semibold text-ink-muted">
             {contracts.length} contrato{contracts.length !== 1 ? 's' : ''}
           </p>
@@ -76,9 +76,9 @@ export default async function DashboardPage() {
         <Link
           href="/dashboard/contracts/new"
           aria-label="Criar novo contrato"
-          className="brand-gradient brand-glow grid h-16 w-16 place-items-center rounded-[24px] text-white transition-transform duration-200 hover:-translate-y-0.5"
+          className="brand-gradient brand-glow grid h-14 w-14 shrink-0 place-items-center rounded-[22px] text-white transition-transform duration-200 hover:-translate-y-0.5 sm:h-16 sm:w-16 sm:rounded-[24px]"
         >
-          <Plus size={28} strokeWidth={2.4} />
+          <Plus size={26} strokeWidth={2.4} />
         </Link>
       </div>
       {contracts.length === 0 ? <EmptyState /> : <ContractListClient contracts={contracts} />}
