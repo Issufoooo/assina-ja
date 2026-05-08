@@ -438,3 +438,75 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* AssinaJá final mobile polish */
+.aj-stage {
+  justify-content: center;
+  gap: clamp(0.85rem, 2.2vh, 1.25rem);
+  padding-left: 24px;
+  padding-right: 24px;
+  transform: translateY(-1.5vh);
+}
+
+.aj-logo-wrap {
+  width: clamp(132px, 38vw, 186px);
+  transform: translateZ(0);
+}
+
+.aj-glass {
+  width: clamp(168px, 48vw, 248px);
+  height: clamp(168px, 48vw, 248px);
+}
+
+.aj-halo {
+  width: clamp(280px, 82vw, 520px);
+  height: clamp(280px, 82vw, 520px);
+}
+
+.aj-logo,
+.aj-shard {
+  object-position: center center;
+  transform-origin: 50% 50%;
+}
+
+.aj-tagline {
+  margin-top: 0.3rem;
+  max-width: min(320px, 84vw);
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.14em;
+  font-size: clamp(0.55rem, 2.55vw, 0.68rem);
+  box-shadow: 0 12px 30px rgba(0, 20, 80, 0.08), inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+.aj-message {
+  margin-top: -0.15rem;
+  max-width: min(300px, 82vw);
+  font-size: clamp(0.78rem, 3.2vw, 0.9rem);
+}
+
+.aj-progress {
+  width: min(170px, 42vw);
+}
+
+.aj-trails {
+  transform: scale(1.05);
+  opacity: 0.66;
+}
+
+@media (max-width: 480px) {
+  .aj-stage { transform: translateY(-2vh); }
+  .aj-logo-wrap { width: clamp(136px, 42vw, 170px); }
+  .aj-glass { width: clamp(172px, 52vw, 220px); height: clamp(172px, 52vw, 220px); }
+  .aj-trails { transform: scale(1.18); opacity: 0.58; }
+}
+
+@media (max-width: 390px) {
+  .aj-logo-wrap { width: 132px; }
+  .aj-glass { width: 168px; height: 168px; }
+  .aj-tagline { max-width: 286px; letter-spacing: 0.11em; }
+}
